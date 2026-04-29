@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Currency Converter</h2>
+
+    <div class="amount-box">
+      <label for="amount">Enter Amount</label>
+      <input type="number" id="amount" value="1" min="0" step="any" />
+    </div>
+
+    <div class="dropdowns">
+      <div class="select-box">
+        <img src="https://flagcdn.com/48x36/us.png" id="from-flag" alt="from flag" onerror="this.style.visibility='hidden'">
+        <select id="from-currency" aria-label="From currency"></select>
+      </div>
+
+      <button id="swap-btn" class="swap-btn" title="Swap currencies">⇄</button>
+
+      <div class="select-box">
+        <img src="https://flagcdn.com/48x36/in.png" id="to-flag" alt="to flag" onerror="this.style.visibility='hidden'">
+        <select id="to-currency" aria-label="To currency"></select>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="convert-btn">Convert</button>
+    </div>
+
+    <p id="result" class="result">Ready — choose currencies and click Convert.</p>
+  </div>
+
+  <!-- country-list.js must be present in same folder -->
+  <script src="country-list.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
